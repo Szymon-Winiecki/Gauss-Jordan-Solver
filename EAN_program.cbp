@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="EAN_program" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Script file="lib_finder.script" />
+			<Target title="Debug">
+				<Option output="bin/Debug/EAN_program" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++17" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/EAN_program" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`wx-config --cflags`" />
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="EAN_programApp.cpp" />
+		<Unit filename="EAN_programApp.h" />
+		<Unit filename="EAN_programMain.cpp" />
+		<Unit filename="EAN_programMain.h" />
+		<Unit filename="NumericalCore/Interval.h" />
+		<Unit filename="NumericalCore/LinearEquationsSystem.cpp" />
+		<Unit filename="NumericalCore/LinearEquationsSystem.h" />
+		<Unit filename="NumericalCore/Matrix.cpp" />
+		<Unit filename="NumericalCore/Matrix.h" />
+		<Extensions>
+			<lib_finder>
+				<lib name="mpfr" />
+			</lib_finder>
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="EAN_programApp.cpp" main="EAN_programFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/EAN_programframe.wxs" src="EAN_programMain.cpp" hdr="EAN_programMain.h" fwddecl="0" i18n="1" name="EAN_programFrame" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
